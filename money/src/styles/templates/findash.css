@@ -1,0 +1,90 @@
+/* FinDash — premium fintech template overrides */
+
+html.tpl-findash {
+  --findash-nav-bg: #0A0A0F;
+}
+
+html.tpl-findash .bg-app {
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(124, 58, 237, 0.08), transparent 55%),
+    var(--color-cream);
+}
+
+html.tpl-findash.dark .bg-app {
+  background:
+    radial-gradient(ellipse 100% 60% at 50% -10%, rgba(124, 58, 237, 0.12), transparent 50%),
+    var(--color-cream);
+}
+
+html.tpl-findash .banking-hero {
+  background: var(--gradient-hero);
+}
+
+html.tpl-findash .banking-stat-glass {
+  background: linear-gradient(145deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+html.tpl-findash .nav-blur {
+  background: var(--findash-nav-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+html.tpl-findash:not(.dark) .nav-blur {
+  background: var(--findash-nav-bg);
+}
+
+html.tpl-findash .nav-blur .nav-pill-item {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+html.tpl-findash .nav-blur .nav-pill-item .nav-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+html.tpl-findash .nav-blur .nav-pill-item.nav-link-active,
+html.tpl-findash .nav-blur .nav-link-active {
+  color: #fff;
+}
+
+html.tpl-findash .nav-blur .nav-link-active .nav-label {
+  color: #fff;
+}
+
+html.tpl-findash .nav-active-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+html.tpl-findash .nav-fab-btn {
+  background: var(--gradient-fab) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.16) inset,
+    var(--shadow-fab),
+    0 0 0 5px color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+html.tpl-findash .nav-fab-glow {
+  opacity: 1;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--color-primary) 55%, transparent) 0%,
+    transparent 70%
+  );
+}
+
+html.tpl-findash .segmented-control {
+  background: color-mix(in srgb, var(--color-surface-muted) 90%, transparent);
+}
+
+html.tpl-findash .banking-profile-card.glass-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(249, 115, 22, 0.06) 100%);
+}
+
+html.tpl-findash .card-surface,
+html.tpl-findash .card-surface-elevated {
+  border-radius: var(--radius-card, 1.5rem);
+  box-shadow: var(--shadow-card);
+}
