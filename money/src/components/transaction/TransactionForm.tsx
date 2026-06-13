@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import type React from "react";
 import { format } from "date-fns";
+import { DatePicker } from "~/components/ui/DatePicker";
 import { MobileHeader } from "~/components/app/MobileHeader";
 import { PageLayout } from "~/components/app/PageLayout";
 import { Button } from "~/components/ui/Button";
@@ -359,13 +360,11 @@ export function TransactionForm({
           </FormSection>
 
           <FormSection label={t("form.date")}>
-            <input
-              id="tx-date"
-              type="date"
+            <DatePicker
               value={date}
+              onChange={setDate}
               disabled={isBusy}
-              onChange={(e) => setDate(e.target.value)}
-              className="w-full min-h-[44px] text-body font-medium text-fg outline-none bg-transparent"
+              label={t("form.date")}
             />
           </FormSection>
 
