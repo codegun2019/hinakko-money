@@ -27,7 +27,8 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({
       server: {
-        preset: process.env["VERCEL"] ? "vercel" : "node",
+        // Always use node preset — api/index.ts wraps dist/server/server.js for Vercel
+        preset: "node",
       },
     }),
     viteReact(),
