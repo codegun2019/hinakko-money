@@ -30,5 +30,5 @@ npm-debug.log*
 # screenshots (dev only)
 screenshots/
 
-# scripts (dev only)
-scripts/
+# keep scripts — needed for CI build, except dev-only screenshot helper
+scripts/screenshot.mjs

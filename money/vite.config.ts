@@ -25,7 +25,11 @@ export default defineConfig({
   },
   plugins: [
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({
+      server: {
+        preset: process.env["VERCEL"] ? "vercel" : "node",
+      },
+    }),
     viteReact(),
     VitePWA({
       registerType: "autoUpdate",

@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build:ci",
+  "outputDirectory": "dist/client",
+  "framework": null,
+  "functions": {
+    "api/index.ts": {
+      "runtime": "nodejs22.x",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}

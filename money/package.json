@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "npm run generate:icons && vite build && node scripts/generate-sw.mjs",
+    "build:ci": "vite build && node scripts/generate-sw.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "db:push": "drizzle-kit push",
